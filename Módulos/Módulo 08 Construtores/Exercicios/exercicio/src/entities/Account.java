@@ -10,26 +10,44 @@ public class Account {
         this.name = name;
         accountNumber = number;
     }
-    public double getBalance(){
+
+    public Account(String name, int number, double initialDeposit) {
+        this.name = name;
+        this.accountNumber = number;
+        deposit(initialDeposit);
+    }
+
+    public double getBalance() {
         return balance;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public int getAccountNumber(){
+
+    public int getAccountNumber() {
         return accountNumber;
     }
 
-    public void setDeposit(double value) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void deposit(double value) {
         balance += value;
     }
 
-    public void setWithdraw(double value) {
+    public void withdraw(double value) {
         balance -= value + 5;
     }
 
     public String toString() {
-        return "Olá, " + name + "\nSaldo em conta: R$" + String.format("%.2f", balance);
+        return "Conta: "
+                + accountNumber +
+                ", Titular: " +
+                name +
+                ", Saldo em conta: R$"
+                + String.format("%.2f", balance);
     }
 
 }
