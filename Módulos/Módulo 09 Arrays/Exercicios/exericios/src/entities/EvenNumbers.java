@@ -1,15 +1,16 @@
 package entities;
 
-public class NegativeNumbers {
+public class EvenNumbers {
 
     private int number;
 
-    public NegativeNumbers(int number) {
+    public EvenNumbers(int number) {
         this.number = number;
     }
 
     public int getNumber() {
         return number;
     }
+
 
 }

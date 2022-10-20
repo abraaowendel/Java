@@ -1,10 +1,9 @@
 package entities;
 
-public class AverageSumList {
-
+public class BelowAverage {
     private double number;
-    
-    public AverageSumList(double number) {
+
+    public BelowAverage(double number) {
         this.number = number;
     }
 

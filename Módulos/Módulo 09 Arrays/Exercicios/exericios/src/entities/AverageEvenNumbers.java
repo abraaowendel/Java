@@ -1,10 +1,9 @@
 package entities;
 
-public class NegativeNumbers {
-
+public class AverageEvenNumbers {
     private int number;
 
-    public NegativeNumbers(int number) {
+    public AverageEvenNumbers(int number) {
         this.number = number;
     }
 

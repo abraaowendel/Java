@@ -2,38 +2,41 @@ package app;
 
 import java.util.Scanner;
 
-import entities.EvenNumbers;
+import entities.AverageEvenNumbers;
 
 import java.util.Locale;
 
-public class Ex04 {
+public class Ex08 {
     public static void main(String[] args) throws Exception {
         Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Quantos numeros você vai digitar? ");
+        System.out.print("Quantos numeros voce vai digitar: ");
         int n = input.nextInt();
 
-        EvenNumbers[] vect = new EvenNumbers[n];
+        AverageEvenNumbers[] vect = new AverageEvenNumbers[n];
 
         for (int i = 0; i < vect.length; i++) {
             System.out.print("Digite um número: ");
             int number = input.nextInt();
-            vect[i] = new EvenNumbers(number);
+            vect[i] = new AverageEvenNumbers(number);
         }
 
-        System.out.println("NUMEROS PARES: ");
-
+        int sum = 0;
         int quant = 0;
-
         for (int i = 0; i < vect.length; i++) {
             if (vect[i].getNumber() % 2 == 0) {
-                System.out.print(vect[i].getNumber() + "  ");
+                sum += vect[i].getNumber();
                 quant++;
             }
         }
 
-        System.out.printf("%nQUANTIDADE DE PARES = %d%n", quant);
+        if (quant > 0) {
+            double media = sum / quant;
+            System.out.printf("MÉDIA DOS PARES: %.2f%n", media);
+        } else {
+            System.out.println("NENHUM NUMERO PAR");
+        }
 
         input.close();
     }

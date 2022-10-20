@@ -1,15 +1,15 @@
 package entities;
 
-public class AverageSumList {
+public class HigherNumber {
 
     private double number;
     
-    public AverageSumList(double number) {
+    public HigherNumber(double number) {
         this.number = number;
     }
 
     public double getNumber() {
         return number;
     }
-
+    
 }

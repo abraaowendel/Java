@@ -1,10 +1,9 @@
 package entities;
 
-public class AverageSumList {
-
+public class SumOfVectors {
     private double number;
-    
-    public AverageSumList(double number) {
+
+    public SumOfVectors(double number) {
         this.number = number;
     }
 

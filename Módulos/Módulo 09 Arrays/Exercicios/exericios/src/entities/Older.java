@@ -1,14 +1,14 @@
 package entities;
 
-public class AverageHeight {
-
+public class Older {
     private String name;
-    private double height;
     private int age;
-
-    public AverageHeight(String name, double height, int age){
+    
+    public Older(String name) {
         this.name = name;
-        this.height = height;
+    }
+
+    public Older(int age) {
         this.age = age;
     }
 
@@ -16,12 +16,9 @@ public class AverageHeight {
         return name;
     }
 
-    public double getHeight() {
-        return height;
-    }
-
     public int getAge() {
         return age;
     }
-
+    
+    
 }
