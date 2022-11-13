@@ -6,7 +6,7 @@ public class Account {
 
     private Integer number;
     private String holder;
-    private Double balance = 0.0;
+    private Double balance;
     private Double withdrawLimit;
 
     public Account() {
@@ -15,6 +15,7 @@ public class Account {
     public Account(Integer number, String holder, Double balance, Double withdrawLimit) {
         this.number = number;
         this.holder = holder;
+        this.balance = 0.0;
         this.withdrawLimit = withdrawLimit;
         deposit(balance);
     }
@@ -56,9 +57,8 @@ public class Account {
             throw new DomainExceptions("Valor do saque ultrapassa o limite de saque.");
         }
         if (amount > balance) {
-            throw new DomainExceptions("Sem saldo.");
+            throw new DomainExceptions("Saldo insuficiente.");
         }
-
         this.balance -= amount;
     }
 
